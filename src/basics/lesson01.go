@@ -9,9 +9,24 @@ import (
 
 // constant can be character, string, boolean, or numeric values.
 // constant := syntax ile değer ataması yapılamaz!
+// Untype Constant
 const (
 	pi   = 3.14
 	ToBe = true
+)
+
+// Type Constant
+const (
+	typeConstant string = "Type Constant"
+)
+
+// iota with constant
+// iota constant kullanarak bir enum gibi davranmasını sağlayabiliriz
+const (
+	_default = iota * 2
+	first
+	second
+	third
 )
 
 //birden fazla değer tanımı
@@ -59,6 +74,17 @@ func main() { //entry point
 	// Constant
 	fmt.Println("Constant: ", pi)
 	fmt.Println("Constant: ", ToBe)
+
+	fmt.Println("First", first)
+	fmt.Println("First", second)
+
+	number := 100
+
+	if number := 10; number == 10 {
+		fmt.Println("Scope Number: ", number)
+	}
+
+	fmt.Println("Number inside main", number)
 }
 
 // type variable isimden sonra geliyor
