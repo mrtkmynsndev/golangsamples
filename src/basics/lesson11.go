@@ -135,7 +135,7 @@ func main() {
 	fmt.Printf("p3 equals p4 -> %t\n", p3 == p4)
 }
 
-func increment(n *int) {
+func incrementTest(n *int) {
 	fmt.Printf("n -> %T\n", n)
 	fmt.Printf("val -> %v, type -> %[1]T\n", *n)
 	fmt.Printf("val -> %v, type -> %[1]T\n", &n)
